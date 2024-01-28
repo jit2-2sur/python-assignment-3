@@ -1,0 +1,50 @@
+Project Overview:
+
+This Python project demonstrates the core principles of Object-Oriented Programming (OOP) by creating a task management system with classes, objects, and various OOP concepts.
+
+OOP Concepts and Implementation:
+
+1. Classes and Objects:
+Classes:
+Here I have used 3 classes, here they are:
+Task: Represents a basic task with title, description, and status.
+TaskList: Manages a collection of tasks, providing methods for adding, removing, searching, and marking tasks as complete.
+PriorityTask: Inherits from Task, adding a priority level for tasks.
+
+Objects: Instantiations of these classes create individual tasks and a task list to work with. I had the following instances.
+For Task: {"Do homework"}, {"Go to the gym", "Cardio workout"}
+For PriorityTask: {"Buy groceries", "Milk and eggs", "high"}
+For TaskList: {task_list}
+
+2. Methods:
+Each class has methods defining its actions:
+Task: mark_as_complete() - marks a task as complete,
+      display_details() - display details about a task
+TaskList: add_task() - adds a new task to task_list,
+          remove_task() - removes a new task to task_list,
+          list_tasks() - display all the tasks of task_list, 
+          find_task() - finds a task by title, 
+          mark_task_complete() - marks a task as complete, 
+          add_priority_task() - adds a priority task, 
+          find_priority_task() - finds a priority task by title
+PriorityTask: display_details() - this method overrides the parent class method and displays additional details about priority
+
+3. Method Overloading:
+While Python doesn't have true method overloading, the add_task() method in TaskList demonstrates a similar concept:
+It can accept different numbers of arguments to create basic tasks with varying levels of detail.
+example- 
+passing 1 argument to add_task(): task_list.add_task("Do homework")
+passing 2 arguments to add_task(): task_list.add_task("Go to the gym", "Cardio workout")
+passing 3 arguments to add_task(): task_list.add_task("Go to the gym", "Cardio workout", complete)
+
+4. Method Overriding:
+PriorityTask overrides the display_details() method inherited from Task to include priority information in its output.
+
+5. Inheritance:
+PriorityTask inherits attributes and methods from Task, demonstrating a parent-child class relationship.
+
+6. Encapsulation:
+Data and methods are encapsulated within classes, promoting data protection and modularity.
+
+7. Polymorphism:
+TaskList methods like find_task() and list_tasks() can work with both Task and PriorityTask objects, demonstrating their ability to handle different object types based on shared inheritance.
